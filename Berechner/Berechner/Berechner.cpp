@@ -1,15 +1,54 @@
 // Berechner.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
+//24.03.2025
+//Manuel Dunkel
+//This Project is a simple Calculator
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-}
+    while (true)
+    {
+        int num1;
+        int num2;
+        char op;
+        double result;
+        cout << "This is an simple calculator\nEnter the first number:";
+        cin >> num1;
+        cout << "Enter the second number";
+        cin >> num2;
+        cout << "Enter an operator (+,-,*,/,%)";
+        cin >> op;
+        switch (op) 
+        {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            case '%':
+                result = num1 % num2;
+                break;
+            default:
+                cout << "You have not entered an operator";
+        }
+        cout << num1 << op << num2 << "=" << result;
 
-// Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
-// Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
+        char end;
+        cout << "Do you want to end the program? (y/n)";
+        cin >> end;
+        if (end == 'y')
+            break;
+    }
+}
 
 // Tipps für den Einstieg: 
 //   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufügen/Verwalten von Dateien.
