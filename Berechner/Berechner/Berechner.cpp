@@ -50,7 +50,7 @@ int main()
                 break;
             case '%':
                 if (num2 == 0)
-                    throw runtime_error("division by zero is not allowed!");
+                    throw runtime_error("modulo by zero is not allowed!");
                 result = num1 % num2;
                 break;
             default:
